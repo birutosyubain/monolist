@@ -1,0 +1,20 @@
+<h1 class="text-center">持っているものランキングページ</h1>
+<% num = 0 %>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <% @ranks.each do |item_id, count| %>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <span class="badge"><%= "総数：#{count}" %></span>
+          <% puts "item_id" %>
+          <% p item_id %>
+          <% i = Item.find(item_id) %>
+          <span class="label label-primary">
+            <%= "#{num += 1}" %>
+          </span>
+          <%= "　#{i.title}" %>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+</div>

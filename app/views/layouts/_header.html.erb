@@ -35,13 +35,19 @@
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li>
-                    <%= link_to "プロフィール" , current_user  %>
-                  </li>
+                  <li><%= link_to "プロフィール" , current_user  %></li>
                   <li role="separator" class="divider"></li>
-                  <li>
-                    <%= link_to "ログアウト", logout_path, method: "delete" %>
-                  </li>
+                  <li><%= link_to "ログアウト", logout_path, method: "delete" %></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  ランキング
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "持っているものランキング", rankings_have_ranking_path %></li>
+                  <li><%= link_to "欲しいものランキング", rankings_want_ranking_path %></li>
                 </ul>
               </li>
             <% end %>
